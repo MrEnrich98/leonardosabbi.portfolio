@@ -1,32 +1,32 @@
-import React, { useState, useEffect } from "react"
-import { connect } from "react-redux"
+import React, { useState, useEffect } from "react";
+import { connect } from "react-redux";
 
-import { Animated } from "react-animated-css"
-import { css } from "@emotion/core"
-import ClipLoader from "react-spinners/ClipLoader"
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
-import Card from "../components/Cards"
-import Card2 from "../components/Card2"
-import Header from "../components/header"
-import Behance1 from "../images/behance.png"
-import Dribbble1 from "../images/dribbble.png"
-import dribbble from "../images/dribbble_white.png"
-import behance from "../images/be_white.png"
-import Instagram from "../images/instagram-icon.png"
-import LinkedIn from "../images/linked-logo.png"
-import Handz1 from "../images/hand1.png"
-import Handz2 from "../images/handz2.png"
-import designIcon from "../images/design-icon2.svg"
-import brandingIcon from "../images/branding-icon2.svg"
-import codeIcon from "../images/code-icon2.svg"
-import "animate.css/animate.min.css"
-import ScrollAnimation from "react-animate-on-scroll"
-import axios from "axios"
-import { toggleDarkmode, toggleDarkMode } from "../state/app"
-import { checkPropTypes } from "prop-types"
-import { Link } from "gatsby"
+import { Animated } from "react-animated-css";
+import { css } from "@emotion/core";
+import ClipLoader from "react-spinners/ClipLoader";
+import Layout from "../components/layout";
+import Image from "../components/image";
+import SEO from "../components/seo";
+import Card from "../components/Cards";
+import Card2 from "../components/Card2";
+import Header from "../components/header";
+import Behance1 from "../images/behance.png";
+import Dribbble1 from "../images/dribbble.png";
+import dribbble from "../images/dribbble_white.png";
+import behance from "../images/be_white.png";
+import Instagram from "../images/instagram-icon.png";
+import LinkedIn from "../images/linked-logo.png";
+import Handz1 from "../images/hand1.png";
+import Handz2 from "../images/handz2.png";
+import designIcon from "../images/design-icon2.svg";
+import brandingIcon from "../images/branding-icon2.svg";
+import codeIcon from "../images/code-icon2.svg";
+import "animate.css/animate.min.css";
+import ScrollAnimation from "react-animate-on-scroll";
+import axios from "axios";
+import { toggleDarkmode, toggleDarkMode } from "../state/app";
+import { checkPropTypes } from "prop-types";
+import { Link } from "gatsby";
 
 //import App from "../components/app"
 
@@ -34,19 +34,19 @@ import { Link } from "gatsby"
 //import "../components/fullpage.min.js"
 
 const IndexPage = ({ isDarkMode, dispatch }) => {
-  let [data, setData] = useState()
+  let [data, setData] = useState();
   function effectCallback() {
     async function call() {
       let resp = await axios.get(
         "https://api.dribbble.com/v2/user/shots?access_token=72b5fa97edd8a4ee26e12f93b7495be78c094c68c5416afa42b944a3f9e2a352"
-      )
+      );
       /*https://api.dribbble.com/v2/user/shots?access_token=72b5fa97edd8a4ee26e12f93b7495be78c094c68c5416afa42b944a3f9e2a352&per_page=100*/
-      setData(resp.data)
+      setData(resp.data);
     }
-    call()
+    call();
   }
 
-  useEffect(effectCallback, [])
+  useEffect(effectCallback, []);
 
   return (
     <Layout>
@@ -61,9 +61,9 @@ const IndexPage = ({ isDarkMode, dispatch }) => {
           </h1>
           <p>
             Hello, I'm <span>Leonardo</span> and I came from Italy🇮🇹, Rome.{" "}
-            <br /> I'm an Interaction Design student and my passion is create{" "}
-            <br /> beautiful web and mobile User Experience that can make
-            people's navigation better.
+            <br /> I'm an Interaction Designer and my passion is create <br />{" "}
+            beautiful web and mobile User Experience that can make people's
+            navigation better.
           </p>
           {/* <a className={isDarkMode ? "darkModeButton" : "lightModeButton"}> */}
           {/* View works */}
@@ -154,7 +154,6 @@ const IndexPage = ({ isDarkMode, dispatch }) => {
             image={Handz1}
           />
         </div>
-        <button className="btn-service">Hire me!</button>
       </div>
       <div className="footer">
         <div className="div-row">
@@ -206,11 +205,11 @@ const IndexPage = ({ isDarkMode, dispatch }) => {
         </p>
       </div>
     </Layout>
-  )
-}
+  );
+};
 export default connect(
-  state => ({
+  (state) => ({
     isDarkMode: state.app.isDarkMode,
   }),
   null
-)(IndexPage)
+)(IndexPage);
