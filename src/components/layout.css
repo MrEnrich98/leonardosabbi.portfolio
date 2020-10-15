@@ -1,0 +1,507 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 0;
+  font-size: 20px;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.4;
+  background-color: rgb(255, 255, 255);
+  height: 100vh;
+}
+
+.Main {
+  margin: 0px;
+  padding: 0px;
+}
+
+.isDark {
+  background: black;
+  color: white;
+}
+
+a {
+  color: #7d45ff;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.Hero {
+  height: 100vh;
+  opacity: 0;
+  animation: HeroAnimation;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.3s;
+  animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.HeroGroup {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 150px 0px 100px 0px;
+  text-align: center;
+}
+
+.Hero h1 {
+  font-size: 80px;
+
+  margin: 0;
+  line-height: 1.2;
+  color: rgb(0, 0, 0);
+  opacity: 0;
+  animation: HeroAnimation;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.3s;
+  animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.Hero p {
+  font-size: 26px;
+  color: rgb(0, 0, 0);
+  margin-bottom: 40px;
+  line-height: 1.4;
+  animation: HeroAnimation 3s 0.3 forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.Hero a {
+  margin: 10px 0px 0px 0px;
+  font-size: 20px;
+  font-weight: 600;
+
+  background: white;
+  color: #7d45ff;
+  border: 2px solid #454bff;
+
+  border-radius: 10px;
+  padding: 12px 18px 12px 18px;
+
+  transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+  cursor: pointer;
+}
+
+.Hero span {
+  font-weight: 600;
+  color: #7d45ff;
+}
+
+.Hero a:hover {
+  color: rgb(255, 255, 255);
+  background: #454bff;
+  border-radius: 10px;
+  box-shadow: 0px 20px 40px rgba(69, 75, 255, 0.233);
+}
+
+.darkModeButton {
+  background-color: black !important;
+  color: white !important;
+  padding: 10px 16px 10px 16px;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 10px;
+}
+
+.lightModebutton {
+  background-color: white;
+  color: black;
+  padding: 10px 16px 10px 16px;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 10px;
+}
+
+@keyframes HeroAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 100;
+    transform: translateY(0px);
+  }
+}
+
+.mouse {
+  width: 25px;
+  height: 40px;
+  margin: 0px;
+  position: absolute;
+  left: 48%;
+  border: 3px solid #5b49ab;
+  border-radius: 300px;
+}
+
+.mouse::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 3px;
+  background: #5b49ab;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 100px;
+  opacity: 1;
+  animation: mouse 1.5s infinite;
+}
+
+@keyframes mouse {
+  from {
+    opacity: 1;
+    top: 3px;
+  }
+  to {
+    opacity: 0;
+    top: 30px;
+  }
+}
+
+.CardsGroup {
+  margin: 50px 0px 100px 0px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 60px;
+  justify-items: center;
+}
+
+.CardsTitle {
+  text-align: center;
+
+  padding-bottom: 30px;
+}
+
+.CardsTitle h1 {
+  font-size: 60px;
+  margin: 0px;
+}
+
+.CardsTitle h2 {
+  margin: 20px 0px 0px 0px;
+  color: #33333350;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 3px;
+}
+
+.CardsTitle a {
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+  color: #db236a;
+  padding: 0px 30px;
+}
+
+.CardsTitle button {
+  padding: 10px 20px;
+  background: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.btn-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+}
+
+.behance-btn a {
+  color: #1769ff !important;
+}
+
+.behance-btn:hover {
+  background-color: #0056ff15 !important;
+}
+
+.CardsTitle button:hover {
+  background: #db236a15;
+  transform: translateY(-10px);
+}
+
+.service-title {
+  text-align: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 30px 0px 0px 0px;
+}
+
+.service-title h2 {
+  margin: 20px 0px 0px 0px;
+  color: #33333350;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 3px;
+}
+
+.service-title h1 {
+  font-size: 60px;
+  margin: 0px;
+}
+
+.Service-bg {
+  background: auto;
+}
+
+.Service {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 30px 100px;
+}
+
+.Service h2 {
+  font-size: 48px;
+  color: #454bff;
+  margin: 0px;
+}
+
+.Service p {
+  min-width: 600px;
+  color: #333333;
+  font-size: 21px;
+}
+
+.service-1 {
+  max-width: 300px;
+  margin: 50px 30px 0px 0px;
+}
+
+.btn-service {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+  margin-bottom: 100px;
+  background-color: #7d45ff2d;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  color: rgb(71, 64, 102);
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.btn-service:hover {
+  background: #5b49ab;
+  transform: translateY(-10px);
+  color: white;
+}
+
+.footer {
+  width: 100%;
+  background-color: rgb(71, 64, 102);
+  color: rgb(255, 255, 255);
+}
+
+.footer p {
+  text-align: center;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.74);
+  padding-bottom: 30px;
+}
+
+.end-h2 {
+  margin: 20px 0px 0px 0px;
+  color: #33333350;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 3px;
+}
+
+.div-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgb(71, 64, 102);
+
+  align-items: center;
+}
+
+.text-01 {
+  max-width: 600px;
+
+  text-align: center;
+}
+
+.text-01 a {
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.text-01 h1 {
+  font-size: 40px;
+  font-weight: 800;
+}
+
+.text-01 h2 {
+  color: rgba(255, 255, 255, 0.733);
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.text-01 p {
+  color: rgba(255, 255, 255, 0.733);
+  font-weight: 400;
+  text-align: center;
+}
+
+.social-link {
+  list-style-type: none;
+  padding: 0px;
+}
+
+.social-link a {
+  color: white;
+  font-weight: 400;
+  padding: 0px 0px 0px 15px;
+  font-size: 18px;
+}
+
+.social-item {
+  display: inline;
+  margin-right: 20px;
+  opacity: 0.6;
+  transition-duration: 0.6s;
+}
+
+.social-item:hover {
+  transition-duration: 0.6s;
+  opacity: 1;
+  transform: scale(1.06);
+}
+
+#name {
+  color: rgba(255, 255, 255, 0.74);
+  transition-duration: 0.6s;
+}
+
+#name:hover {
+  color: rgb(255, 255, 255);
+  transition-duration: 0.6s;
+}
+
+@media screen and (min-width: 1920px) and (max-width: 2560px) {
+  .CardsGroup {
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+  }
+}
+
+@media (max-width: 940px) {
+  .CardsGroup {
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+  }
+
+  .Hero {
+    background: none;
+    text-align: center;
+  }
+
+  .Hero a {
+    padding: 10px 16px 10px 16px;
+    font-size: 16px;
+    background: #454bff;
+    color: white;
+  }
+  .Hero h1 {
+    font-size: 60px;
+  }
+
+  .Hero h2 {
+    font-size: 30px;
+  }
+
+  .Hero p {
+    font-size: 18px;
+  }
+
+  .CardsTitle {
+    text-align: center;
+  }
+
+  .btn-group {
+    padding: 14px 16px;
+    font-size: 14px;
+  }
+  .Service {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 30px 100px;
+  }
+
+  .Service p {
+    min-width: 200px;
+    font-size: 18px;
+  }
+  .div-row {
+    flex-direction: column;
+    text-align: center;
+    margin: 30px 50px 0px;
+    align-items: center;
+  }
+
+  .div-row p {
+    text-align: center;
+  }
+
+  .social-link {
+    padding: 0px;
+  }
+
+  .social-link li {
+    display: inline;
+    margin-right: 20px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .HeroGroup {
+    text-align: center;
+    max-width: 300px;
+    padding: 100px 0px;
+  }
+
+  .btn-group {
+    display: none;
+  }
+
+  .Service {
+    flex-direction: column;
+    margin: 10px 50px;
+  }
+  .Service p {
+    min-width: 200px;
+  }
+
+  .div-row {
+    flex-direction: column;
+    text-align: center;
+    margin: 30px 50px 0px;
+    align-items: center;
+  }
+
+  .div-row p {
+    text-align: right;
+  }
+
+  .text-01 {
+    text-align: center;
+  }
+
+  .social-link li {
+    display: inline;
+  }
+}

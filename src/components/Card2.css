@@ -1,0 +1,109 @@
+.uiux-pack {
+  height: 441px;
+  width: 381px;
+  background: linear-gradient(
+    135deg,
+    rgb(145, 127, 209) 0%,
+    rgb(88, 70, 168) 100%
+  );
+  border-radius: 20px;
+  position: relative;
+  align-self: center;
+  text-align: left;
+  color: #ffffff;
+  padding: 30px;
+  overflow: hidden;
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.089);
+  margin: 30px;
+  transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.cardClass .card-dev {
+  background: linear-gradient(
+    135deg,
+    rgb(209, 194, 127) 0%,
+    rgb(223, 199, 62) 100%
+  );
+}
+
+.uiux-pack:hover {
+  transform: translateY(-20px);
+}
+
+.uiux-pack h2 {
+  color: #ffffff;
+}
+
+.uiux-pack p {
+  color: #ffffffb6;
+  min-width: 200px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.uiux-pack a {
+  background: white;
+  padding: 10px 30px;
+  border-radius: 20px;
+  font-weight: 700;
+  color: rgb(88, 70, 168);
+}
+
+.uiux-pack img {
+  width: 300px;
+  position: absolute;
+  top: 350px;
+  right: -120px;
+  transition: all 0.25s ease-in-out;
+  animation: handAnimation;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@keyframes handAnimation {
+  from {
+    transform: translateX(0) translateY(0);
+  }
+  to {
+    transform: translateX(20px) translateY(20px);
+  }
+}
+
+.arrow-icon img {
+  width: 15px;
+  top: 0px;
+  right: 0px;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .uiux-pack {
+    width: 100%;
+    height: 341px;
+  }
+
+  .uiux-pack h2 {
+    font-size: 30px;
+  }
+
+  .uiux-pack img {
+    width: 260px;
+
+    top: 220px;
+  }
+
+  .btn-service {
+    padding: 10px 170px;
+  }
+}
+
+@media (min-width: 940px) {
+  .uiux-pack img {
+    width: 260px;
+    top: 380px;
+  }
+}
+
+.uiux-pack:hover .finger {
+  transform: translateX(-10px) translateY(-10px);
+}

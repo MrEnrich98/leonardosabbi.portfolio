@@ -1,0 +1,153 @@
+.Header {
+  position: fixed;
+  background-color: #ffffff;
+  width: 100%;
+  padding: 20px 0px;
+  z-index: 100;
+  transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.HeaderScrolled {
+  background: rgba(255, 255, 255, 0.815);
+  padding: 10px 0px;
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.HeaderScrolled a {
+  color: white;
+}
+
+.HeaderGroup {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  align-items: center;
+  justify-items: center;
+}
+
+.false {
+  display: none;
+}
+
+.true {
+  display: block;
+}
+
+.Header a {
+  color: black;
+  transition: 0.6s;
+  cursor: pointer;
+}
+
+.Header a:hover {
+  color: rgba(0, 0, 0, 0.397);
+}
+
+.Header span {
+  color: #7d45ff;
+  font-weight: 600;
+}
+
+.Header span:hover {
+  color: rgba(88, 70, 168, 0.397);
+}
+
+.contact {
+  background: linear-gradient(
+    135deg,
+    rgb(123, 98, 212) 0%,
+    rgb(88, 70, 168) 100%
+  );
+  padding: 10px 16px;
+  border: none;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.8s;
+  animation: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.contact:hover {
+  background-color: #4448c9;
+  box-shadow: 0px 5px 20px rgba(88, 70, 168, 0.315);
+  transform: translateY(-3px);
+}
+
+.Header button a {
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.Header button a:hover {
+  color: white;
+}
+
+@media (max-width: 820px) {
+  .Header {
+    padding: 10px 0;
+  }
+
+  .HeaderGroup a {
+    font-size: 14px;
+  }
+
+  button {
+    padding: 6px 12px;
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 760px) {
+  #responsive-nav {
+    display: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .Header {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .HeaderGroup {
+    display: none;
+  }
+
+  .Header button {
+    border-radius: 8px;
+  }
+  ul {
+    list-style-type: none;
+    font-size: 30px;
+    font-weight: 600;
+  }
+
+  ul .true {
+  }
+
+  .false {
+    max-height: 0px;
+    pointer-events: none;
+  }
+
+  .true {
+    max-height: 154px;
+    pointer-events: auto;
+  }
+
+  #responsive-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #responsive-nav a {
+    margin-left: 25px;
+  }
+  #hamburger-icon {
+    margin-right: 25px;
+  }
+}
