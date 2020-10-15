@@ -1,9 +1,9 @@
-import { a } from "gatsby"
-import PropTypes from "prop-types"
-import React, { Component } from "react"
-import logo from "../images/name.png"
-import "./header.css"
-import { Collapse } from "react-burgers"
+import { a } from "gatsby";
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import logo from "../images/name.png";
+import "./header.css";
+import { Collapse } from "react-burgers";
 import {
   Link,
   Element,
@@ -11,39 +11,39 @@ import {
   animateScroll as scroll,
   scrollSpy,
   scroller,
-} from "react-scroll"
-import dribbble from "../images/dribbble_white.png"
-import behance from "../images/be_white.png"
-import Twitter from "../images/twitter-logo.png"
-import LinkedIn from "../images/linked-logo.png"
-import Dribbble1 from "../images/dribbble.png"
+} from "react-scroll";
+import dribbble from "../images/dribbble_white.png";
+import behance from "../images/be_white.png";
+import Twitter from "../images/twitter-logo.png";
+import LinkedIn from "../images/linked-logo.png";
+import Dribbble1 from "../images/dribbble.png";
 
 class Header extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
       HasScrolled: false,
       isToggled: false,
-    }
+    };
   }
   componentDidMount() {
-    window.addEventListener("scroll", this.handleScroll)
+    window.addEventListener("scroll", this.handleScroll);
   }
 
-  handleScroll = event => {
-    const scrollTop = window.pageYOffset
+  handleScroll = (event) => {
+    const scrollTop = window.pageYOffset;
     if (scrollTop > 50) {
-      this.setState({ HasScrolled: true })
+      this.setState({ HasScrolled: true });
     } else {
-      this.setState({ HasScrolled: false })
+      this.setState({ HasScrolled: false });
     }
-  }
+  };
 
   toggle() {
-    this.setState(currentState => ({
+    this.setState((currentState) => ({
       isToggled: !currentState.isToggled,
-    }))
+    }));
   }
 
   render() {
@@ -96,8 +96,8 @@ class Header extends React.Component {
           </button>
         </div>
       </div>
-    )
+    );
   }
 }
 
-export default Header
+export default Header;

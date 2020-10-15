@@ -133,28 +133,32 @@ const IndexPage = ({ isDarkMode, dispatch }) => {
         id="anchor-2"
         className={isDarkMode ? "service-title isDark" : "service-title"}
       >
-        <h2>How I work</h2>
-        <h1>Service</h1>
+        <ScrollAnimation animateIn="fadeInUp" animateOnce="true">
+          <h2>How I work</h2>
+          <h1>Service</h1>
+        </ScrollAnimation>
       </div>
-      <div className={isDarkMode ? "Service-bg isDark" : "Service-bg"}>
-        <div className={isDarkMode ? "Service isDark" : "Service"}>
-          <Card2
-            title={"UI/UX Design"}
-            subtitle={
-              "Focused on solving the problem. I will create fantastic and intuitive interfaces for your online business, be it a website or a mobile application."
-            }
-            image={Handz2}
-          />
-          <Card2
-            className="card-dev"
-            title={"Front End Development"}
-            subtitle={
-              "As a designer who can code too, i strictly collab with developers and create a beautiful websites or web app."
-            }
-            image={Handz1}
-          />
+      <ScrollAnimation animateIn="fadeInUp" animateOnce="true">
+        <div className={isDarkMode ? "Service-bg isDark" : "Service-bg"}>
+          <div className={isDarkMode ? "Service isDark" : "Service"}>
+            <Card2
+              title={"UI/UX Design"}
+              subtitle={
+                "Focused on solving the problem. I will create fantastic and intuitive interfaces for your online business, be it a website or a mobile application."
+              }
+              image={Handz2}
+            />
+            <Card2
+              className="card-dev"
+              title={"Front End Development"}
+              subtitle={
+                "As a designer who can code too, i strictly collab with developers and create a beautiful websites or web app."
+              }
+              image={Handz1}
+            />
+          </div>
         </div>
-      </div>
+      </ScrollAnimation>
       <div className="footer">
         <div className="div-row">
           <div className="text-01">
