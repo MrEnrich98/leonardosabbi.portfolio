@@ -42,7 +42,7 @@
 }
 
 .Header a:hover {
-  color: rgba(0, 0, 0, 0.397);
+  opacity: 0.5;
 }
 
 .Header span {
