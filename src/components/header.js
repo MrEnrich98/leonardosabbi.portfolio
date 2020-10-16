@@ -52,9 +52,9 @@ class Header extends React.Component {
         className={this.state.HasScrolled ? "Header HeaderScrolled" : "Header"}
       >
         <div id="responsive-nav">
-          <a to="/myname">
+          <Link duration={500} to="anchor0">
             Leonardo <span>Sabbi</span>
-          </a>
+          </Link>
           <a id="hamburger-icon" onClick={() => this.toggle()}>
             <Collapse
               active={this.state.isToggled ? true : false}
@@ -68,10 +68,20 @@ class Header extends React.Component {
         </div>
         <ul className={this.state.isToggled ? "true" : "false"}>
           <li className="item1-anim">
-            <Link to="anchor-1">Works</Link>
+            <Link
+              to="anchor-1"
+              offset={-83}
+              spy={true}
+              smooth={true}
+              duration={500}
+            >
+              Works
+            </Link>
           </li>
           <li className="item2-anim">
-            <Link to="anchor-2">Service</Link>
+            <Link spy={true} smooth={true} duration={500} to="anchor-2">
+              Service
+            </Link>
           </li>
           <li>
             <button id="item3-anim" className="contact">
@@ -82,12 +92,26 @@ class Header extends React.Component {
 
         <div className="HeaderGroup">
           <a to="/myname">
-            Leonardo <span>Sabbi</span>
+            <Link to="anchor0" spy={true} smooth={true} duration={500}>
+              Leonardo <span>Sabbi</span>
+            </Link>
           </a>
-          <Link to="anchor-1" spy={true} smooth={true} duration="500">
+          <Link
+            to="anchor-1"
+            offset={-83}
+            spy={true}
+            smooth={true}
+            duration={500}
+          >
             Works
           </Link>
-          <Link to="anchor-2" spy={true} smooth={true} duration="500">
+          <Link
+            to="anchor-2"
+            offset={-50}
+            spy={true}
+            smooth={true}
+            duration={500}
+          >
             Services
           </Link>
           <button className="contact">

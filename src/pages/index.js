@@ -27,6 +27,7 @@ import axios from "axios";
 import { toggleDarkmode, toggleDarkMode } from "../state/app";
 import { checkPropTypes } from "prop-types";
 import { Link } from "gatsby";
+import { Element } from "react-scroll";
 
 //import App from "../components/app"
 
@@ -54,21 +55,22 @@ const IndexPage = ({ isDarkMode, dispatch }) => {
 
       <Header />
       <div className="navTrigger"></div>
-      <div className={isDarkMode ? "Hero isDark" : "Hero"}>
-        <div className={isDarkMode ? "HeroGroup isDark" : "HeroGroup"}>
-          <h1>
-            UI/UX and <br /> Interaction Designer
-          </h1>
-          <p>
-            Hello, I'm <span>Leonardo</span> and I came from Italy🇮🇹, Rome.{" "}
-            <br /> I'm an Interaction Designer and my passion is create <br />{" "}
-            beautiful web and mobile User Experience that can make people's
-            navigation better.
-          </p>
-          {/* <a className={isDarkMode ? "darkModeButton" : "lightModeButton"}> */}
-          {/* View works */}
-          {/* </a> */}
-          {/*<a
+      <Element name="anchor0">
+        <div className={isDarkMode ? "Hero isDark" : "Hero"}>
+          <div className={isDarkMode ? "HeroGroup isDark" : "HeroGroup"}>
+            <h1>
+              UI/UX and <br /> Interaction Designer
+            </h1>
+            <p>
+              Hello, I'm <span>Leonardo</span> and I came from Italy🇮🇹, Rome.{" "}
+              <br /> I'm an Interaction Designer and my passion is create <br />{" "}
+              beautiful web and mobile User Experience that can make people's
+              navigation better.
+            </p>
+            {/* <a className={isDarkMode ? "darkModeButton" : "lightModeButton"}> */}
+            {/* View works */}
+            {/* </a> */}
+            {/*<a
             className={isDarkMode ? "darkModeButton" : "lightModeButton"}
             onClick={() => dispatch(toggleDarkMode(!isDarkMode))}
           >
@@ -76,10 +78,10 @@ const IndexPage = ({ isDarkMode, dispatch }) => {
           </a>
           */}
 
-          <div className="mouse"></div>
+            <div className="mouse"></div>
+          </div>
         </div>
-      </div>
-
+      </Element>
       <div
         id="anchor-1"
         className={isDarkMode ? "CardsTitle isDark" : "CardsTitle"}
